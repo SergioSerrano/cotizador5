@@ -319,7 +319,7 @@ $(document).ready(function (e) {
 			var idC='char';
 			var idC=$(this).parents('li').attr('value').toString();
 			if (idC.length<9)
-				for (i=0;i<=(10-idC.length);i++)
+				for (i=0;i<=(9-(idC.length-1));i++)
 				{
 					idC='0'+idC;
 				}
