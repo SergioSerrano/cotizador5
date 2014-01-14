@@ -418,7 +418,7 @@ function gotFileWriter(writer)
 	var meses1 = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
 	var f1 = new Date();
 	var doc = new jsPDF();
-	var lineas=5;
+	var lineas=10;
 	var contador=0;
 	
 
@@ -435,7 +435,7 @@ function gotFileWriter(writer)
 	doc.text(120,lineas,'Puebla Pue, a:  ' + f1.getDate() +  ' de '  + meses1[f1.getMonth()] + ' de ' + f1.getFullYear());
 	lineas=lineas+10;
 	doc.text(5,lineas,'Comprador');
-	doc.text(120,lineas,'Agente');
+	doc.text(155,lineas,'Agente');
 	
 	lineas=lineas+5;
 	var comp=$('#Comprador').val();
@@ -443,12 +443,12 @@ function gotFileWriter(writer)
 	doc.text(5,lineas,comp);
 	var agente=$('#agente').val();
 	alert(agente);
-	doc.text(120,lineas,agente);
+	doc.text(155,lineas,agente);
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Cliente');
-	doc.text(60,lineas,'Poblacion');
-	doc.text(120,lineas,'Condiciones');
+	doc.text(75,lineas,'Poblacion');
+	doc.text(155,lineas,'Condiciones');
 	
 	lineas=lineas+5;
 	var no_cliente=$('#No_cliente').val();
@@ -461,52 +461,52 @@ function gotFileWriter(writer)
 	lineas=lineas+5;
 	
 	doc.text(5,lineas,'Razon Social');
-	doc.text(60,lineas,'Estado');
-	doc.text(120,lineas,'Telefono');
+	doc.text(77,lineas,'Estado');
+	doc.text(155,lineas,'Telefono');
 	
 	lineas=lineas+5;
 	var razon=$('#razon').val();
 	doc.text(5,lineas,razon);
 	var estado=$('#estado').val();
-	doc.text(60,lineas,estado);
+	doc.text(77,lineas,estado);
 	var tel=$('#tel').val();
-	doc.text(120,lineas,tel);
+	doc.text(155,lineas,tel);
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Calle');
-	doc.text(60,lineas,'C.P.');
-	doc.text(120,lineas,'Fax');
+	doc.text(77,lineas,'C.P.');
+	doc.text(155,lineas,'Fax');
 	
 	
 	lineas=lineas+5;
 	var calle=$('#calle').val();
 	doc.text(5,lineas,calle);
 	var cp=$('#cp').val();
-	doc.text(60,lineas,cp);
+	doc.text(77,lineas,cp);
 	var fax=$('#fax').val();
-	doc.text(120,lineas,fax);
+	doc.text(155,lineas,fax);
 	
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Colonia');
-	doc.text(60,lineas,'Status');
-	doc.text(120,lineas,'Mail');
+	doc.text(77,lineas,'Status');
+	doc.text(155,lineas,'Mail');
 	
 	lineas=lineas+5;
 	var colonia=$('#colonia').val();
 	doc.text(5,lineas,colonia);
 	var status=$('#status').val();
-	doc.text(60,lineas,status);
+	doc.text(77,lineas,status);
 	var  mail=$('#mail').val();
-	doc.text(120,lineas,mail);
+	doc.text(155,lineas,mail);
 	
-	lineas=lineas+50;
+	lineas=lineas+20;
 	
 	
 	doc.text(5,lineas,'Por medio de la presente le envio un cordial saludo y a su vez le hago llegar la cotizacion solicitada');
 	
 	
-	contador=lineas+50;
+	contador=lineas+20;
 	
 	$.each($('.clave123'), function(index, value) {
 				valorclave=$(this).val();
@@ -542,7 +542,7 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	var tt=$('#tt').text();
-	doc.text(130,lineas,tt);
+	doc.text(155,lineas,tt);
 	lineas=lineas+5;
 	doc.text(120,lineas,'Descuento');
 	
@@ -550,25 +550,25 @@ function gotFileWriter(writer)
 	
 	var t_descuento=$('#t_descuento').val();
 	
-	doc.text(130,lineas,t_descuento);
+	doc.text(155,lineas,t_descuento);
 	
 	lineas=lineas+5;
 	var t_descuento2=$('#c_percent').val();
-	doc.text(130,lineas,t_descuento2);
+	doc.text(155,lineas,t_descuento2);
 	
 	lineas=lineas+5;
 	doc.text(120,lineas,'Flete');
 	
 	
 	var felte=$('#flete1').text();
-	doc.text(130,lineas,felte);
+	doc.text(155,lineas,felte);
 	
 	lineas=lineas+5;
 	doc.text(120,lineas,'SUB-TOTAL');
 	
 	
 	var SB=$('#st_m1').text();
-	doc.text(130,lineas,SB);
+	doc.text(155,lineas,SB);
 	
 	
 	lineas=lineas+5;
@@ -577,14 +577,14 @@ function gotFileWriter(writer)
 	
 
 	var IVA=$('#iva1').text();
-	doc.text(130,lineas,IVA);
+	doc.text(155,lineas,IVA);
 	
 	lineas=lineas+5;
 	doc.text(120,lineas,'TOTAL');
 	
 	
 	var TOTAL=$('#mt1').text();
-	doc.text(130,lineas,TOTAL);
+	doc.text(155,lineas,TOTAL);
 	
 	writer.write(doc.output());
 	
