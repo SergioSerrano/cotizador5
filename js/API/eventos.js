@@ -318,8 +318,10 @@ $(document).ready(function (e) {
 		$('#info_com2').live('click', function () {
 			var idC='char';
 			var idC=$(this).parents('li').attr('value').toString();
+			var lar=idC.length;
 			if (idC.length<9)
-				for (i=0;i<=(9-(idC.length-1));i++)
+				
+				for (i=1;i<=(9-lar);i++)
 				{
 					idC='0'+idC;
 				}
