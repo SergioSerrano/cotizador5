@@ -553,9 +553,38 @@ function gotFileWriter(writer)
 	doc.text(130,lineas,t_descuento);
 	
 	lineas=lineas+5;
-	doc.text(130,lineas,t_descuento);
+	var t_descuento2=$('#c_percent').val();
+	doc.text(130,lineas,t_descuento2);
+	
+	lineas=lineas+5;
+	doc.text(120,lineas,'Flete');
 	
 	
+	var felte=$('#flete1').text();
+	doc.text(130,lineas,felte);
+	
+	lineas=lineas+5;
+	doc.text(120,lineas,'SUB-TOTAL');
+	
+	
+	var SB=$('#st_m1').text();
+	doc.text(130,lineas,SB);
+	
+	
+	lineas=lineas+5;
+	doc.text(120,lineas,'IVA');
+	
+	
+
+	var IVA=$('#iva1').text();
+	doc.text(130,lineas,IVA);
+	
+	lineas=lineas+5;
+	doc.text(120,lineas,'TOTAL');
+	
+	
+	var TOTAL=$('#mt1').text();
+	doc.text(130,lineas,TOTAL);
 	
 	writer.write(doc.output());
 	
