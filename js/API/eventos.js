@@ -80,7 +80,7 @@ $(document).ready(function (e) {
 							$ul.append($li);
 							
 							//<a id='clsss' href=#cotizacion>" + obj[i].nombre + "</a>
-							$("<a  data-theme='b' href='#'' data-transition='none' id='info_com2' >"+obj[i].nombre+"</a>").appendTo("#get_cli" + i );
+							$("<a  data-theme='b' href='#'' data-transition='none' id='info_com2' >"+obj[i].cliente+"---"+obj[i].nombre+"</a>").appendTo("#get_cli" + i );
 						}
 						//$.each( objs, function ( i, val ) {
 						//	html += "<li value='"+val.cliente+"'>" + val.nombre + "</li>";
@@ -325,7 +325,7 @@ $(document).ready(function (e) {
 				{
 					idC='0'+idC;
 				}
-			alert(idC);
+			
 			$('.cliente123').attr('value',idC.toString());
 			obtener_info_cliente(idC.toString());
 			window.location.href = '#cotizacion';
