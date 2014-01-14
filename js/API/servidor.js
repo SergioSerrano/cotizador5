@@ -556,12 +556,46 @@ function gotFileWriter(writer)
 	var t_descuento2=$('#c_percent').val();
 	doc.text(155,lineas,t_descuento2);
 	
+	
+	
+	
+	
+	
+	
+	
 	lineas=lineas+5;
 	doc.text(120,lineas,'Flete');
+	
+	doc.text(5,lineas+5,'Condiciones');
+	doc.text(5,lineas+10,'de venta');
+	doc.text(5,lineas+45,'Comentarios');
+	doc.text(5,lineas+55,'Tiempo de');
+	doc.text(5,lineas+60,'entrega');
+	
+	
+	doc.text(30,lineas+5,'100% de deposito');
+	
+	doc.text(30,lineas+15,'Deposito de efectivo o cheque mismo banco. Si es un cheque de otro banco');
+	
+	doc.text(30,lineas+20,'se autoriza su');
+	doc.text(30,lineas+25,'pedido al tercer dia que su cheque se refleje y no sea rebotado por el banco');
+	
+	doc.text(30,lineas+30,'Ficha de convenio CIE Bancomer Num. 1829-7 Cta. Bancomer Suc. 1803');
+	doc.text(30,lineas+35,'No. de Cta. 0446573118 Trasferencia electronica 012 650 0044573118 3');
+	
+	doc.text(30,lineas+40,'BANAMEX 184414-2 Suc. 826 San Felipe o Transferencia 002 65008261844142 7 ');
+	doc.text(30,lineas+45,'Los precios anteriores No incluyen IVA, estan sujetos a cambio');
+	
+	doc.text(30,lineas+50,'sin previo aviso y a existencias');
+	doc.text(30,lineas+55,'5 dias habiles');
 	
 	
 	var felte=$('#flete1').text();
 	doc.text(155,lineas,felte);
+	
+	
+	
+
 	
 	lineas=lineas+5;
 	doc.text(120,lineas,'SUB-TOTAL');
@@ -587,6 +621,8 @@ function gotFileWriter(writer)
 	doc.text(155,lineas,TOTAL);
 	
 	writer.write(doc.output());
+	
+	
 	
 
 }

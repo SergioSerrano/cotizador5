@@ -16,12 +16,10 @@
 	<gap:platform name="symbian" />
 	<gap:platform name="blackberry" />
 	<gap:platform name="winphone" />
+	
 	<icon gap:platform="ios" height="57" src="css/images/emoticones_excelente.png" width="57" />
 	
-	<gap:splash gap:platform="ios" height="480" src="css/images/emoticones_excelente.png" width="320" />
-	<gap:splash gap:platform="ios" height="960" src="css/images/emoticones_excelente.png" width="640" />
-	<gap:splash gap:platform="ios" height="1024" src="css/images/emoticones_excelente.png" width="768" />
-	<gap:splash gap:platform="ios" height="768" src="css/images/emoticones_excelente.png" width="1024" />
+	
 
 	<feature name="File">
 		<param name="ios-package" value="CDVFile" />
