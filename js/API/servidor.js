@@ -564,8 +564,8 @@ function gotFileWriter(writer)
 	
 	
 	lineas=lineas+5;
-	doc.text(120,lineas,'Flete');
 	
+	doc.text(120,lineas,'Flete');	
 	doc.text(5,lineas+5,'Condiciones');
 	doc.text(5,lineas+10,'de venta');
 	doc.text(5,lineas+45,'Comentarios');
