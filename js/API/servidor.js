@@ -628,8 +628,8 @@ function gotFileWriter(writer)
 	writer.write(doc.output());
 	
 	
-	
-	window.plugins.EmailComposer.showEmailComposer(null,null,null,null,null,null,[fileEntry.name]);
+	//window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
+	window.plugins.EmailComposer.showEmailComposer(null,null,null,null,null,null,null,[fileEntry.name]);
 	
 	
 	
