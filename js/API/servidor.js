@@ -528,33 +528,33 @@ function gotFileWriter(writer)
 	contador=lineas+20;
 	$.each($('.clprecio'), function(index, value) {
 				valorclave=$(this).text();
-				doc.text(155,contador,valorclave);	
+				doc.text(165,contador,valorclave);	
 					contador = contador + 5;
 				});
 	
 	contador=lineas+20;
 	$.each($('.cl_stotal'), function(index, value) {
 				valorclave=$(this).text();
-				doc.text(175,contador,valorclave);	
+				doc.text(185,contador,valorclave);	
 					contador = contador + 5;
 				});
 	lineas=contador;
 	
 	lineas=lineas+5;
 	var tt=$('#tt').text();
-	doc.text(175,lineas,tt);
+	doc.text(185,lineas,tt);
 	lineas=lineas+5;
-	doc.text(135,lineas,'Descuento');
+	doc.text(165,lineas,'Descuento');
 	
 	var t_descuento2=$('#c_percent').val();
-	doc.text(175,lineas,t_descuento2);
+	doc.text(185,lineas,t_descuento2);
 	
 	lineas=lineas+5;
 	
-	var t_descuento=$('#t_descuento').val();
+	var t_descuento=$('#t_descuento').text();
 	alert(t_descuento);
 	
-	doc.text(175,lineas,t_descuento);
+	doc.text(185,lineas,t_descuento);
 	
 	
 	
@@ -568,7 +568,7 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	
-	doc.text(135,lineas,'Flete');	
+	doc.text(165,lineas,'Flete');	
 	doc.setFontSize(9); 
 	doc.text(5,lineas+5,'Condiciones');
 	doc.text(5,lineas+10,'de venta');
@@ -596,34 +596,34 @@ function gotFileWriter(writer)
 	doc.setFontSize(12); 
 	
 	var felte=$('#flete1').text();
-	doc.text(175,lineas,felte);
+	doc.text(185,lineas,felte);
 	
 	
 	
 
 	
 	lineas=lineas+5;
-	doc.text(135,lineas,'SUB-TOTAL');
+	doc.text(165,lineas,'SUB-TOTAL');
 	
 	
 	var SB=$('#st_m1').text();
-	doc.text(175,lineas,SB);
+	doc.text(185,lineas,SB);
 	
 	
 	lineas=lineas+5;
-	doc.text(135,lineas,'IVA');
+	doc.text(165,lineas,'IVA');
 	
 	
 
 	var IVA=$('#iva1').text();
-	doc.text(175,lineas,IVA);
+	doc.text(185,lineas,IVA);
 	
 	lineas=lineas+5;
-	doc.text(135,lineas,'TOTAL');
+	doc.text(165,lineas,'TOTAL');
 	
 	
 	var TOTAL=$('#mt1').text();
-	doc.text(175,lineas,TOTAL);
+	doc.text(185,lineas,TOTAL);
 	
 	writer.write(doc.output());
 	
