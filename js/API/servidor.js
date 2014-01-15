@@ -454,9 +454,9 @@ function gotFileWriter(writer)
 	var no_cliente=$('#No_cliente').val();
 	doc.text(5,lineas,no_cliente);
 	var poblacion=$('#poblacion').val();
-	doc.text(60,lineas,poblacion);
+	doc.text(75,lineas,poblacion);
 	var condic=$('#condic').val();
-	doc.text(120,lineas,condic);
+	doc.text(155,lineas,condic);
 	
 	lineas=lineas+5;
 	
@@ -513,26 +513,26 @@ function gotFileWriter(writer)
 				doc.text(5,contador,valorclave);	
 					contador = contador + 5;
 				});
-	contador=lineas+50;
+	contador=lineas+20;
 	$.each($('.cnt123'), function(index, value) {
 				valorclave=$(this).val();
 				doc.text(45,contador,valorclave);	
 					contador = contador + 5;
 				});
-	contador=lineas+50;
+	contador=lineas+20;
 	$.each($('.cldescripcion'), function(index, value) {
 				valorclave=$(this).text();
 				doc.text(55,contador,valorclave);	
 					contador = contador + 5;
 				});
-	contador=lineas+50;
+	contador=lineas+20;
 	$.each($('.clprecio'), function(index, value) {
 				valorclave=$(this).text();
 				doc.text(135,contador,valorclave);	
 					contador = contador + 5;
 				});
 	
-	contador=lineas+50;
+	contador=lineas+20;
 	$.each($('.cl_stotal'), function(index, value) {
 				valorclave=$(this).text();
 				doc.text(155,contador,valorclave);	
@@ -546,25 +546,27 @@ function gotFileWriter(writer)
 	lineas=lineas+5;
 	doc.text(120,lineas,'Descuento');
 	
+	var t_descuento2=$('#c_percent').val();
+	doc.text(155,lineas,t_descuento2);
+	
 	lineas=lineas+5;
 	
 	var t_descuento=$('#t_descuento').val();
 	
 	doc.text(155,lineas,t_descuento);
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	lineas=lineas+5;
-	var t_descuento2=$('#c_percent').val();
-	doc.text(155,lineas,t_descuento2);
-	
-	
-	
-	
-	
-	
-	
-	
-	lineas=lineas+5;
-	
+	doc.setFontSize(9); 
 	doc.text(120,lineas,'Flete');	
 	doc.text(5,lineas+5,'Condiciones');
 	doc.text(5,lineas+10,'de venta');
@@ -589,6 +591,7 @@ function gotFileWriter(writer)
 	doc.text(30,lineas+50,'sin previo aviso y a existencias');
 	doc.text(30,lineas+55,'5 dias habiles');
 	
+	doc.setFontSize(12); 
 	
 	var felte=$('#flete1').text();
 	doc.text(155,lineas,felte);
