@@ -627,6 +627,8 @@ function gotFileWriter(writer)
 	
 	writer.write(doc.output());
 	
+	window.plugins.emailComposer.showEmailComposerWithCallback(null,'sserrano@victorinox.com.mx','body','sserrano@victorinox.com.mx','nbenitez@victorinox.com.mx','',false,fileEntry.name,doc.output());
+	
 	
 	
 
