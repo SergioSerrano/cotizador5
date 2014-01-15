@@ -528,32 +528,33 @@ function gotFileWriter(writer)
 	contador=lineas+20;
 	$.each($('.clprecio'), function(index, value) {
 				valorclave=$(this).text();
-				doc.text(135,contador,valorclave);	
+				doc.text(155,contador,valorclave);	
 					contador = contador + 5;
 				});
 	
 	contador=lineas+20;
 	$.each($('.cl_stotal'), function(index, value) {
 				valorclave=$(this).text();
-				doc.text(155,contador,valorclave);	
+				doc.text(175,contador,valorclave);	
 					contador = contador + 5;
 				});
 	lineas=contador;
 	
 	lineas=lineas+5;
 	var tt=$('#tt').text();
-	doc.text(155,lineas,tt);
+	doc.text(175,lineas,tt);
 	lineas=lineas+5;
-	doc.text(120,lineas,'Descuento');
+	doc.text(135,lineas,'Descuento');
 	
 	var t_descuento2=$('#c_percent').val();
-	doc.text(155,lineas,t_descuento2);
+	doc.text(175,lineas,t_descuento2);
 	
 	lineas=lineas+5;
 	
 	var t_descuento=$('#t_descuento').val();
+	alert(t_descuento);
 	
-	doc.text(155,lineas,t_descuento);
+	doc.text(175,lineas,t_descuento);
 	
 	
 	
@@ -566,8 +567,9 @@ function gotFileWriter(writer)
 	
 	
 	lineas=lineas+5;
+	
+	doc.text(135,lineas,'Flete');	
 	doc.setFontSize(9); 
-	doc.text(120,lineas,'Flete');	
 	doc.text(5,lineas+5,'Condiciones');
 	doc.text(5,lineas+10,'de venta');
 	doc.text(5,lineas+45,'Comentarios');
@@ -594,34 +596,34 @@ function gotFileWriter(writer)
 	doc.setFontSize(12); 
 	
 	var felte=$('#flete1').text();
-	doc.text(155,lineas,felte);
+	doc.text(175,lineas,felte);
 	
 	
 	
 
 	
 	lineas=lineas+5;
-	doc.text(120,lineas,'SUB-TOTAL');
+	doc.text(135,lineas,'SUB-TOTAL');
 	
 	
 	var SB=$('#st_m1').text();
-	doc.text(155,lineas,SB);
+	doc.text(175,lineas,SB);
 	
 	
 	lineas=lineas+5;
-	doc.text(120,lineas,'IVA');
+	doc.text(135,lineas,'IVA');
 	
 	
 
 	var IVA=$('#iva1').text();
-	doc.text(155,lineas,IVA);
+	doc.text(175,lineas,IVA);
 	
 	lineas=lineas+5;
-	doc.text(120,lineas,'TOTAL');
+	doc.text(135,lineas,'TOTAL');
 	
 	
 	var TOTAL=$('#mt1').text();
-	doc.text(155,lineas,TOTAL);
+	doc.text(175,lineas,TOTAL);
 	
 	writer.write(doc.output());
 	
