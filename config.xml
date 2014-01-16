@@ -39,7 +39,7 @@
 	<gap:plugin name="org.apache.cordova.file-transfer" />
 	<gap:plugin name="com.badrit.emailcomposer" />
 
-	<gap:plugin name="de.appplant.cordova.plugin.email-composer" />
+	
 	<preference name="phonegap-version" value="3.0.0" />
 	<access origin="*" subdomains="true" />
 </widget>
