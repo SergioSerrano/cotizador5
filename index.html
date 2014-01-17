@@ -97,6 +97,7 @@
 		</style>
 	</head>
 	<body>
+	
 		<!-- pagina principal -->
 		<div data-role="page" id="cotizacion" data-theme="b">
 			<div data-role="header" data_theme="a">
@@ -108,6 +109,7 @@ font-weight:bold;
 			</div>
 -->
 			<div data-role="content" data-theme="b" style=" top:600 ;alignment-adjust:central; vertical-align:central; text-align:center">
+					<canvas id="myCanvas" width="165px" height="145px">
 				<div style="text-align: center;  ">
 					<label for="textinput" style="text-align: center " data-theme="b">Av. Hermanos Sérdan N° 717 Col. Sn Rafael Poniente, CP 72029 Puebla, Pue. México. 01 (222) 2668330 ext 113 ferias@victorinox.com.mx</label>
 				</div>
@@ -427,6 +429,7 @@ font-weight:bold;
 						</li>
 					</ul>
 				</div>
+						</canvas>
 			</div>
 			<div data-role="footer" style="text-align:center;" data-position="fixed" data-theme="b">
 				<img src="css/images/plecaVictorinox.jpg" width="100%" height="20px" alt="Texto Alternativo">
@@ -465,6 +468,8 @@ font-weight:bold;
 			</div>
 			<div data-role="footer" data-position="fixed" data-theme="b"></div>
 		</div>
+			
+			
 		<script type="text/javascript" src="js/API/jquery.maskedinput-1.3.1.min_.js"></script>
 		<script type="text/javascript">
 			/*	$('.clave123').live('change', function() { 
