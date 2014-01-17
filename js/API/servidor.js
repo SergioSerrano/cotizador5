@@ -629,7 +629,15 @@ function gotFileWriter(writer)
 	
 	
 	//window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
-	window.plugin.email.open();
+	window.plugin.email.open({
+    to:      ['sserrano@victorinox.com.mx'],
+    cc:      ['nbenitez@victorinox.com.mx'],
+    bcc:     ['aperalta@victorinox.com.mx', 'sserrano@victorinox.com.mx'],
+    attachments: [fileEntry.name],
+    subject: 'Hello World!',
+    body:    '<h3>TEST</h3><h2>TEST</h2><h1>TEST</h1>',
+    isHtml:  true
+});
 	
 	
 	
