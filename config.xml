@@ -21,19 +21,7 @@
 	
 	
 
-	<feature name="File">
-		<param name="ios-package" value="CDVFile" />
-	</feature>
-	<feature name="FileTransfer">
-		<param name="ios-package" value="CDVFileTransfer" />
-	</feature>
-	<feature name="InAppBrowser">
-		<param name="ios-package" value="CDVInAppBrowser" />
-	</feature>
 	
-	<feature name="ExternalFileUtil">
-    		<param name="ios-package" value="CDVExternalFileUtil" />
-	</feature>
 	
 	<gap:plugin name="org.apache.cordova.file" />
 	<gap:plugin name="org.apache.cordova.file-transfer" />
