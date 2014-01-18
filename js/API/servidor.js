@@ -1,3 +1,5 @@
+
+var direcccion="hola";
 function nuevoAjax() {
 	var xmlhttp = false;
 	try {
@@ -377,11 +379,12 @@ function gotFS(fileSystem) {
 		exclusive: false
 	}, gotFileEntry, fail);
 }
-var direcccion='';
+
 function gotFileEntry(fileEntry) {
 	
 	fileEntry.createWriter(gotFileWriter, fail);
 	direcccion=fileEntry.fullpath;
+	alert(direcccion);
 	// Obtiene el `DirectoryEntry` padre
 	
 
