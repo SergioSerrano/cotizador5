@@ -383,7 +383,8 @@ function gotFS(fileSystem) {
 function gotFileEntry(fileEntry) {
 	
 	fileEntry.createWriter(gotFileWriter, fail);
-	direcccion=fileEntry.fullpath;
+	alert(direcccion);
+	direcccion=fileEntry.toURL();
 	alert(direcccion);
 	// Obtiene el `DirectoryEntry` padre
 	
