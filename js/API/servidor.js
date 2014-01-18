@@ -427,10 +427,10 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	var comp=$('#Comprador').val();
-	alert(comp);
+	
 	doc.text(5,lineas,comp);
 	var agente=$('#agente').val();
-	alert(agente);
+	
 	doc.text(155,lineas,agente);
 	
 	lineas=lineas+5;
@@ -540,7 +540,7 @@ function gotFileWriter(writer)
 	lineas=lineas+5;
 	
 	var t_descuento=$('#t_descuento').text();
-	alert(t_descuento);
+	
 	
 	doc.text(185,lineas,t_descuento);
 	
@@ -614,8 +614,9 @@ function gotFileWriter(writer)
 	doc.text(185,lineas,TOTAL);
 	
 	writer.write(doc.output());
-	alert(fileEntry.fullpath);
-	var dire=fileEntry.fullPath;
+	
+	var dire=fileEntry.toURL;
+	alert(dire);
 	
 	//window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
 	window.plugin.email.open({
