@@ -377,11 +377,11 @@ function gotFS(fileSystem) {
 		exclusive: false
 	}, gotFileEntry, fail);
 }
-
+var direcccion='';
 function gotFileEntry(fileEntry) {
 	
 	fileEntry.createWriter(gotFileWriter, fail);
-
+	direcccion=fileEntry.fullpath;
 	// Obtiene el `DirectoryEntry` padre
 	
 
@@ -389,7 +389,7 @@ function gotFileEntry(fileEntry) {
 }
 
 function success(entries) {
-	
+	alert("succes " + error.code);
 }
 
 function fail(error) {
@@ -615,7 +615,7 @@ function gotFileWriter(writer)
 	
 	writer.write(doc.output());
 	
-	var dire=fileEntry.toURL;
+	var dire=direcccion;
 	alert(dire);
 	
 	//window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
