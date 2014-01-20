@@ -384,7 +384,7 @@ function gotFileEntry(fileEntry) {
 	
 	fileEntry.createWriter(gotFileWriter, fail);
 	alert(direcccion);
-	direcccion=fileEntry.toURL();
+	direcccion=fileEntry.fullPath;
 	alert(direcccion);
 	// Obtiene el `DirectoryEntry` padre
 	
