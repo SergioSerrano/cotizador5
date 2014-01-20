@@ -4,7 +4,7 @@ var index = 0;
 $(document).ready(function (e) {
 	document.addEventListener("deviceready", function () {
 
-		
+
 
 
 		var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
@@ -39,7 +39,7 @@ $(document).ready(function (e) {
 		});
 
 		$("#search-2").live("change", function (event, ui) {
-			
+
 			var $input = $(this);
 			var $ul = $("#autocomplete"),
 
@@ -52,16 +52,16 @@ $(document).ready(function (e) {
 
 
 			$ul.html("");
-		
+
 			if (value && value.length > 2) {
-				
+
 				$ul.html("<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>");
 				$ul.listview("refresh");
-			
+
 				var obj = "";
 				var msg = "";
 				ajax = nuevoAjax();
-				
+
 				ajax.open("POST", "http://testapp2.260mb.net/sincronizar/b_clientes.php", true);
 				ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				ajax.send("buscado=" + value);
@@ -69,18 +69,18 @@ $(document).ready(function (e) {
 					if (ajax.readyState == 4) {
 
 						msg = ajax.responseText;
-						
+
 						obj = $.parseJSON(msg);
 						var size = obj.length;
 						for (i = 0; i < size; i++) {
 							/*$('<input  class="cnt123" type="text" name="textinput" id="cnt" value="" />').appendTo('#posicion' + index + '2');*/
-							/*html +=*/ 
-								var $li='<li  value="' + obj[i].cliente + '" id="get_cli'+i+'"></li>';
-							
+							/*html +=*/
+							var $li = '<li  value="' + obj[i].cliente + '" id="get_cli' + i + '"></li>';
+
 							$ul.append($li);
-							
+
 							//<a id='clsss' href=#cotizacion>" + obj[i].nombre + "</a>
-							$("<a  data-theme='b' href='#'' data-transition='none' id='info_com2' >"+obj[i].cliente+"---"+obj[i].nombre+"</a>").appendTo("#get_cli" + i );
+							$("<a  data-theme='b' href='#'' data-transition='none' id='info_com2' >" + obj[i].cliente + "---" + obj[i].nombre + "</a>").appendTo("#get_cli" + i);
 						}
 						//$.each( objs, function ( i, val ) {
 						//	html += "<li value='"+val.cliente+"'>" + val.nombre + "</li>";
@@ -165,6 +165,8 @@ $(document).ready(function (e) {
 			$('<input  class="clave123" type="text" name="textinput" id="clv" value="" />').appendTo('#posicion' + index + '1');
 			$('<input  class="cnt123" type="text" name="textinput" id="cnt" value="" />').appendTo('#posicion' + index + '2');
 			$('<a  data-theme="b" href="#" data-transition="none" id="info_com" >X</a>').appendTo('#posicionC' + index + '12');
+
+			$('<a  data-theme="b" href="#" data-transition="none" id="barcode" >CB</a>').appendTo('#posicionC' + index + '12');
 			index++;
 			return false;
 		});
@@ -219,14 +221,14 @@ $(document).ready(function (e) {
 		var TEMP_3 = 0;
 
 		$('.cnt123').live('change', function () {
-			
+
 
 			var punit = $(this).parents('tr').children('.p_unit').children('#labo').html();
-			
+
 
 			var ccont = $(this).val();
 			TEMP_2 = (isNaN(parseFloat(punit))) ? 0 : parseFloat(punit);
-	
+
 			TEMP_3 = (isNaN(parseFloat(ccont))) ? 0 : parseFloat(ccont);
 			var suma = TEMP_2 * TEMP_3;
 
@@ -315,18 +317,34 @@ $(document).ready(function (e) {
 			$('.cnt123').change();
 			return false;
 		});
+
+
+		$('#barcode').live('click', function () {
+			cordova.plugins.barcodeScanner.scan(function (result) {
+				alert("We got a barcode\n" +
+					"Result: " + result.text + "\n" +
+					"Format: " + result.format + "\n" +
+					"Cancelled: " + result.cancelled);
+			}, function (error) {
+				alert("Scanning failed: " + error);
+			});
+			$(this).parents('TR').children('.clave123').val(result.text );
+			$('.clave123').change();
+			return false;
+		});
+
+
 		$('#info_com2').live('click', function () {
-			var idC='char';
-			var idC=$(this).parents('li').attr('value').toString();
-			var lar=idC.length;
-			if (idC.length<9)
-				
-				for (i=1;i<=(9-lar);i++)
-				{
-					idC='0'+idC;
-				}
-			
-			$('.cliente123').attr('value',idC.toString());
+			var idC = 'char';
+			var idC = $(this).parents('li').attr('value').toString();
+			var lar = idC.length;
+			if (idC.length < 9)
+
+				for (i = 1; i <= (9 - lar); i++) {
+					idC = '0' + idC;
+			}
+
+			$('.cliente123').attr('value', idC.toString());
 			obtener_info_cliente(idC.toString());
 			window.location.href = '#cotizacion';
 			return false;

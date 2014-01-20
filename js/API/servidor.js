@@ -336,7 +336,7 @@ function llena_tabla(objc, obj) {
 
 	
 	objc.parents('tr').children('.descripcion').children('#las').remove();
-	$('<label style="text-align:right" data-theme="b" id="las" class="cldescripcion">' + obj.descripcion + '</label>').appendTo(objc.parents('tr').children('.descripcion'));
+	$('<label style="text-align:right" data-theme="b" id="las" class="cldescripcion">' + obj.descripcion+'('+obj.existencia + ')</label>').appendTo(objc.parents('tr').children('.descripcion'));
 	objc.parents('tr').children('.p_unit').children('#labo').remove();
 	
 	$('<label  style="visibility:hidden" id="labo" ">' + valor + '</label>').appendTo(objc.parents('tr').children('.p_unit'));
