@@ -140,14 +140,14 @@ jsPDFAPI.addImage = function(imageData, format, x, y, w, h) {
 
         var ctx = canvas.getContext('2d');
         if (!ctx) {
-            throw ('addImage requires canvas to be supported by browser.');
+            alert ('addImage requires canvas to be supported by browser.');
         }
         ctx.drawImage(imageData, 0, 0, canvas.width, canvas.height);
         imageData = canvas.toDataURL('image/jpeg');
 	    format = "JPEG";
 	}
 	if (format.toUpperCase() !== 'JPEG') {
-		throw new Error('addImage currently only supports format \'JPEG\', not \''+format+'\'');
+		alert('addImage currently only supports format \'JPEG\', not \''+format+'\'');
 	}
 
 	var imageIndex
