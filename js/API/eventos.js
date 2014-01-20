@@ -321,10 +321,7 @@ $(document).ready(function (e) {
 
 		$('#barcode').live('click', function () {
 			cordova.plugins.barcodeScanner.scan(function (result) {
-				alert("We got a barcode\n" +
-					"Result: " + result.text + "\n" +
-					"Format: " + result.format + "\n" +
-					"Cancelled: " + result.cancelled);
+				alert("We got a barcode   "+"Result: " + result.text + "  " +"Format: " + result.format + "  " +"Cancelled: " + result.cancelled);
 			}, function (error) {
 				alert("Scanning failed: " + error);
 			});
