@@ -28,6 +28,7 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer" />
 	<gap:plugin name="org.devgeeks.canvas2imageplugin" />
 	<gap:plugin name="de.appplant.cordova.plugin.printer" />
+	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 
 	
 	<preference name="phonegap-version" value="3.0.0" />
