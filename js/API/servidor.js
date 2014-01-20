@@ -439,14 +439,14 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Cliente');
-	doc.text(75,lineas,'Poblacion');
+	doc.text(77,lineas,'Poblacion');
 	doc.text(155,lineas,'Condiciones');
 	
 	lineas=lineas+5;
 	var no_cliente=$('#No_cliente').val();
 	doc.text(5,lineas,no_cliente);
 	var poblacion=$('#poblacion').val();
-	doc.text(75,lineas,poblacion);
+	doc.text(77,lineas,poblacion);
 	var condic=$('#condic').val();
 	doc.text(155,lineas,condic);
 	
@@ -536,7 +536,7 @@ function gotFileWriter(writer)
 	var tt=$('#tt').text();
 	doc.text(185,lineas,tt);
 	lineas=lineas+5;
-	doc.text(165,lineas,'Descuento');
+	doc.text(155,lineas,'Descuento');
 	
 	var t_descuento2=$('#c_percent').val();
 	doc.text(185,lineas,t_descuento2);
@@ -560,7 +560,7 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	
-	doc.text(165,lineas,'Flete');	
+	doc.text(155,lineas,'Flete');	
 	doc.setFontSize(9); 
 	doc.text(5,lineas+5,'Condiciones');
 	doc.text(5,lineas+10,'de venta');
@@ -595,7 +595,7 @@ function gotFileWriter(writer)
 
 	
 	lineas=lineas+5;
-	doc.text(165,lineas,'SUB-TOTAL');
+	doc.text(155,lineas,'SUB-TOTAL');
 	
 	
 	var SB=$('#st_m1').text();
@@ -603,7 +603,7 @@ function gotFileWriter(writer)
 	
 	
 	lineas=lineas+5;
-	doc.text(165,lineas,'IVA');
+	doc.text(155,lineas,'IVA');
 	
 	
 
@@ -611,7 +611,7 @@ function gotFileWriter(writer)
 	doc.text(185,lineas,IVA);
 	
 	lineas=lineas+5;
-	doc.text(165,lineas,'TOTAL');
+	doc.text(155,lineas,'TOTAL');
 	
 	
 	var TOTAL=$('#mt1').text();
