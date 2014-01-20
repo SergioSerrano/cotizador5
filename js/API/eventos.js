@@ -328,9 +328,9 @@ $(document).ready(function (e) {
 			}, function (error) {
 				alert("Scanning failed: " + error);
 			});
-			$(this).parents('TR').children('.clave123').val(result.text );
-			$('.clave123').change();
-			return false;
+		//	$(this).parents('TR').children('.clave123').val(result.text );
+			//$('.clave123').change();
+			//return false;
 		});
 
 
