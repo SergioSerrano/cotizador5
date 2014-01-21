@@ -321,11 +321,14 @@ $(document).ready(function (e) {
 
 		$('#barcode').live('click', function () {
 			cordova.plugins.barcodeScanner.scan(function (result) {
-				alert("We got a barcode   "+"Result: " + result.text + "  " +"Format: " + result.format + "  " +"Cancelled: " + result.cancelled);
+				$(this).parents('TR').children('.clave123').val(result.text );
+				//alert("We got a barcode   "+"Result: " + result.text + "  " +"Format: " + result.format + "  " +"Cancelled: " + result.cancelled);
+				return false;
 			}, function (error) {
 				alert("Scanning failed: " + error);
+				return false;
 			});
-		//	$(this).parents('TR').children('.clave123').val(result.text );
+		//	
 			//$('.clave123').change();
 			//return false;
 		});
