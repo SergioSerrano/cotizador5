@@ -320,8 +320,10 @@ $(document).ready(function (e) {
 
 
 		$('#barcode').live('click', function () {
+			
+			var $labels=$(this).parents('tr').children('.clave').children('.clave123');
 			cordova.plugins.barcodeScanner.scan(function (result) {
-				$(this).parent('.clave123').val(result.text);
+				$labels.val(result.text);
 				//alert("We got a barcode   "+"Result: " + result.text + "  " +"Format: " + result.format + "  " +"Cancelled: " + result.cancelled);
 				return false;
 			}, function (error) {
