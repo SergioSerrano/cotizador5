@@ -321,7 +321,7 @@ $(document).ready(function (e) {
 
 		$('#barcode').live('click', function () {
 			cordova.plugins.barcodeScanner.scan(function (result) {
-				$(this).parents('.clave123').val(result.text);
+				$(this).parent('.clave123').val(result.text);
 				//alert("We got a barcode   "+"Result: " + result.text + "  " +"Format: " + result.format + "  " +"Cancelled: " + result.cancelled);
 				return false;
 			}, function (error) {
