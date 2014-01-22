@@ -541,10 +541,15 @@ function gotFileWriter(writer)
 	var tt=$('#tt').text();
 	doc.text(185,lineas,tt);
 	lineas=lineas+5;
-	doc.text(155,lineas,'Descuento');
 	
 	var t_descuento2=$('#c_percent').val();
+	if (t_descuento2!='0')
+	{
+	doc.text(155,lineas,'Descuento');
+	
+	
 	doc.text(185,lineas,t_descuento2+'%');
+	}
 	
 	lineas=lineas+5;
 	
