@@ -333,6 +333,9 @@ function llena_tabla(objc, obj) {
 				valor=valor*1.67;
 			}
 	
+	objc.parents('tr').children('.clave').children('#clv').val(obj.clave1);
+	
+	
 	objc.parents('tr').children('.ext').children('#extid').remove();
 	$('<label style="text-align:right" data-theme="b" id="extid" class="ext_num">' + obj.existencia+'</label>').appendTo(objc.parents('tr').children('.ext'));
 	
