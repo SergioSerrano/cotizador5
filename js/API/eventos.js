@@ -111,6 +111,13 @@ $(document).ready(function (e) {
 		$('#add_line').tap(function () {
 			var tabla = $('#Claves');
 			var $linea = $('<tr></tr>');
+			
+			$linea.append($('<td></td>').attr({
+				id: 'posicion' + index + 'ext'
+			}).html('').css({
+				background: '#ebebeb'
+			}).addClass("ext"));
+			
 			$linea.append($('<td></td>').attr({
 				id: 'posicion' + index + '1'
 			}).html('').css({
@@ -163,10 +170,10 @@ $(document).ready(function (e) {
 			.addClass("gen"));
 			tabla.append($linea);
 			$('<input  class="clave123" type="text" name="textinput" id="clv" value="" />').appendTo('#posicion' + index + '1');
-			$('<input  class="cnt123" type="text" name="textinput" id="cnt" value="" />').appendTo('#posicion' + index + '2');
+			$('<input  class="cnt123" style="width:35px" type="text" name="textinput" id="cnt" value="" style= />').appendTo('#posicion' + index + '2');
 			$('<a  data-theme="b" href="#" data-transition="none" id="info_com" >X</a>').appendTo('#posicionC' + index + '12');
-
-			$('<a  data-theme="b" href="#" data-transition="none" id="barcode" >CB</a>').appendTo('#posicion' + index + '1');
+		
+			$('<a  data-theme="b" href="#" data-transition="none" id="barcode" >Codigo de Barras</a>').appendTo('#posicion' + index + '1');
 			index++;
 			return false;
 		});

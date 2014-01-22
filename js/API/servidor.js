@@ -333,13 +333,15 @@ function llena_tabla(objc, obj) {
 				valor=valor*1.67;
 			}
 	
-
+	objc.parents('tr').children('.ext').children('#extid').remove();
+	$('<label style="text-align:right" data-theme="b" id="extid" class="ext_num">' + obj.existencia+'</label>').appendTo(objc.parents('tr').children('.ext'));
 	
 	objc.parents('tr').children('.descripcion').children('#las').remove();
-	$('<label style="text-align:right" data-theme="b" id="las" class="cldescripcion">' + obj.descripcion+'('+obj.existencia + ')</label>').appendTo(objc.parents('tr').children('.descripcion'));
-	objc.parents('tr').children('.p_unit').children('#labo').remove();
+	$('<label style="text-align:right" data-theme="b" id="las" class="cldescripcion">' + obj.descripcion+'</label>').appendTo(objc.parents('tr').children('.descripcion'));
 	
+	objc.parents('tr').children('.p_unit').children('#labo').remove();
 	$('<label  style="visibility:hidden" id="labo" ">' + valor + '</label>').appendTo(objc.parents('tr').children('.p_unit'));
+	
 	objc.parents('tr').children('.p_unit').children('#lab').remove();
 	$('<label style="text-align:right" data-theme="b" id="lab" class="clprecio">$' + valor.format() + '</label>').appendTo(objc.parents('tr').children('.p_unit'));
 }
@@ -546,7 +548,7 @@ function gotFileWriter(writer)
 	var t_descuento=$('#t_descuento').text();
 	
 	
-	doc.text(185,lineas,t_descuento);
+	doc.text(185,lineas,t_descuento+'%');
 	
 	
 	
