@@ -544,14 +544,14 @@ function gotFileWriter(writer)
 	doc.text(155,lineas,'Descuento');
 	
 	var t_descuento2=$('#c_percent').val();
-	doc.text(185,lineas,t_descuento2);
+	doc.text(185,lineas,t_descuento2+'%');
 	
 	lineas=lineas+5;
 	
 	var t_descuento=$('#t_descuento').text();
 	
 	
-	doc.text(185,lineas,t_descuento+'%');
+	doc.text(185,lineas,t_descuento);
 	
 	
 	
