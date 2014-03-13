@@ -304,34 +304,11 @@ function llena_datos_cliente(obj) {
 function llena_tabla(objc, obj) {
 	
 	
-		var opc1=$("#radio-choice-1").is(":checked");
-		var opc2=$("#radio-choice-2").is(":checked");
-		var opc3=$("#radio-choice-3").is(":checked");
-		var opc4=$("#radio-choice-4").is(":checked");
-		
-	$("#radio-choice-1").prop('disabled', true);
-	$("#radio-choice-2").prop('disabled', true);
-	$("#radio-choice-3").prop('disabled', true);
-	$("#radio-choice-4").prop('disabled', true);
 			
 			var valor = (isNaN(parseFloat(obj.precio))) ? 0 : parseFloat(obj.precio);
-			//var punit = $(this).parents('tr').children('.p_unit').children('#labo').html();
-			if (opc1) 
-			{
-				valor=valor*1;				
-			}
-			else if (opc2)
-			{
-				valor=valor*1.12;
-			}
-			else if (opc3)
-			{
-				valor=valor*1.20;
-			}
-			else if (opc4)
-			{
+		
 				valor=valor*1.67;
-			}
+			
 	
 	objc.parents('tr').children('.clave').children('#clv').val(obj.clave1);
 	
