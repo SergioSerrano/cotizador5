@@ -477,7 +477,7 @@ function gotFileWriter(writer)
 	lineas=lineas+20;
 	
 	
-	doc.text(5,lineas,'Por medio de la presente le envio un cordial saludo y a su vez le hago llegar la cotizacion solicitada');
+	doc.text(5,lineas,'Por medio de la presente le envio un cordial saludo y a su vez le hago llegar la cotizaci&oacute;n solicitada');
 	
 	
 	contador=lineas+20;
