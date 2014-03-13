@@ -405,7 +405,7 @@ function gotFileWriter(writer)
 	doc.setFontSize(12); 
 	doc.text(120,lineas,'VICTORINOX');
 	lineas=lineas+10;
-	doc.text(60,lineas,'COTIZACI&Oacute;N');
+	doc.text(60,lineas,'COTIZACIÓN');
 	doc.text(120,lineas,'Puebla Pue, a:  ' + f1.getDate() +  ' de '  + meses1[f1.getMonth()] + ' de ' + f1.getFullYear());
 	lineas=lineas+10;
 	doc.text(5,lineas,'Comprador');
@@ -477,7 +477,7 @@ function gotFileWriter(writer)
 	lineas=lineas+20;
 	
 	
-	doc.text(5,lineas,'Por medio de la presente le envio un cordial saludo y a su vez le hago llegar la cotizaci&oacute;n solicitada');
+	doc.text(5,lineas,'Por medio de la presente le envio un cordial saludo y a su vez le hago llegar la cotización solicitada');
 	
 	
 	contador=lineas+20;
