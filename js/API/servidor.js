@@ -603,8 +603,9 @@ function gotFileWriter(writer)
 	
 	var TOTAL=$('#mt1').text();
 	doc.text(185,lineas,TOTAL);
-	
-	writer.write(doc.output('dataurlstring'));
+
+	writer.write(doc.output());
+
 	
 	var dire=direcccion;
 	//alert(dire);
