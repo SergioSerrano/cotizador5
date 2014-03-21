@@ -604,10 +604,6 @@ function gotFileWriter(writer)
 	var TOTAL=$('#mt1').text();
 	doc.text(185,lineas,TOTAL);
 
-<<<<<<< HEAD
-	
-=======
->>>>>>> 6f610e5f9905eb4753cba3a7b66d3aed26168b62
 	writer.write(doc.output());
 
 	
