@@ -177,7 +177,7 @@ var uncompress = function(data){
 	, output = {}
 	, sign = 1
 	, stringparts // undef. will be [] in string mode
-	
+
 	, activeobject = output
 	, parentchain = []
 	, parent_key_pair
@@ -188,7 +188,7 @@ var uncompress = function(data){
 	, ch
 
 	i = 1 // stripping starting {
-	
+
 	while (i != datalen){
 		// - { } ' are special.
 
