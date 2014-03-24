@@ -356,7 +356,7 @@ function success2(parent) {
 
 
 function gotFS(fileSystem) {
-	fileSystem.root.getFile($('#No_cliente').val() + ".pdf", {
+	fileSystem.root.getFile($('#No_cliente').val() + "cot.pdf", {
 		create: true,
 		exclusive: false
 	}, gotFileEntry, fail);
@@ -421,8 +421,8 @@ function gotFileWriter(writer)
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Cliente');
-	doc.text(77,lineas,'Poblacion');
-	doc.text(155,lineas,'Condiciones');
+	doc.text(85,lineas,'Poblacion');
+	doc.text(145,lineas,'Condiciones');
 	
 	lineas=lineas+5;
 	var no_cliente=$('#No_cliente').val();
@@ -615,7 +615,7 @@ function gotFileWriter(writer)
     to:      ['sserrano@victorinox.com.mx'],
 
     attachments: [dire],
-    subject: $('#No_cliente').val() + ".pdf",
+    subject: $('#No_cliente').val() + "cot.pdf",
     body:    '<cotizacion de '+$('#No_cliente').val(),
     isHtml:  false
 });
