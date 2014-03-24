@@ -29,6 +29,7 @@
 	<gap:plugin name="org.devgeeks.canvas2imageplugin" />
 	<gap:plugin name="de.appplant.cordova.plugin.printer" />
 	<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+	<gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2" />
 
 	
 	<preference name="phonegap-version" value="3.0.0" />
