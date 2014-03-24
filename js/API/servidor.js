@@ -409,7 +409,7 @@ function gotFileWriter(writer)
 	doc.text(120,lineas,'Puebla Pue, a:  ' + f1.getDate() +  ' de '  + meses1[f1.getMonth()] + ' de ' + f1.getFullYear());
 	lineas=lineas+10;
 	doc.text(5,lineas,'Comprador');
-	doc.text(155,lineas,'Agente');
+	doc.text(145,lineas,'Agente');
 	
 	lineas=lineas+5;
 	var comp=$('#Comprador').val();
@@ -417,7 +417,7 @@ function gotFileWriter(writer)
 	doc.text(5,lineas,comp);
 	var agente=$('#agente').val();
 	
-	doc.text(155,lineas,agente);
+	doc.text(145,lineas,agente);
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Cliente');
@@ -428,51 +428,51 @@ function gotFileWriter(writer)
 	var no_cliente=$('#No_cliente').val();
 	doc.text(5,lineas,no_cliente);
 	var poblacion=$('#poblacion').val();
-	doc.text(77,lineas,poblacion);
+	doc.text(85,lineas,poblacion);
 	var condic=$('#condic').val();
-	doc.text(155,lineas,condic);
+	doc.text(145,lineas,condic);
 	
 	lineas=lineas+5;
 	
 	doc.text(5,lineas,'Razon Social');
-	doc.text(77,lineas,'Estado');
-	doc.text(155,lineas,'Telefono');
+	doc.text(85,lineas,'Estado');
+	doc.text(145,lineas,'Telefono');
 	
 	lineas=lineas+5;
 	var razon=$('#razon').val();
 	doc.text(5,lineas,razon);
 	var estado=$('#estado').val();
-	doc.text(77,lineas,estado);
+	doc.text(85,lineas,estado);
 	var tel=$('#tel').val();
-	doc.text(155,lineas,tel);
+	doc.text(145,lineas,tel);
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Calle');
-	doc.text(77,lineas,'C.P.');
-	doc.text(155,lineas,'Fax');
+	doc.text(85,lineas,'C.P.');
+	doc.text(145,lineas,'Fax');
 	
 	
 	lineas=lineas+5;
 	var calle=$('#calle').val();
 	doc.text(5,lineas,calle);
 	var cp=$('#cp').val();
-	doc.text(77,lineas,cp);
+	doc.text(85,lineas,cp);
 	var fax=$('#fax').val();
-	doc.text(155,lineas,fax);
+	doc.text(145,lineas,fax);
 	
 	
 	lineas=lineas+5;
 	doc.text(5,lineas,'Colonia');
-	doc.text(77,lineas,'Status');
-	doc.text(155,lineas,'Mail');
+	doc.text(85,lineas,'Status');
+	doc.text(145,lineas,'Mail');
 	
 	lineas=lineas+5;
 	var colonia=$('#colonia').val();
 	doc.text(5,lineas,colonia);
 	var status=$('#status').val();
-	doc.text(77,lineas,status);
+	doc.text(85,lineas,status);
 	var  mail=$('#mail').val();
-	doc.text(155,lineas,mail);
+	doc.text(145,lineas,mail);
 	
 	lineas=lineas+20;
 	
