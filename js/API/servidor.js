@@ -611,15 +611,15 @@ function gotFileWriter(writer)
 	//alert(dire);
 	
 	//window.plugins.EmailComposer.showEmailComposerWithCallback(callback,subject,body,toRecipients,ccRecipients,bccRecipients,isHtml,attachments);
-	/*window.plugin.email.open({
+	window.plugin.email.open({
     to:      ['sserrano@victorinox.com.mx'],
 
     attachments: [dire],
     subject: $('#No_cliente').val() + "cot.pdf",
     body:    '<cotizacion de '+$('#No_cliente').val(),
     isHtml:  false
-});*/
-	cordova.plugins.fileOpener2.open(
+});
+	/*cordova.plugins.fileOpener2.open(
         dire, 
         'application/pdf', 
         { 
@@ -630,7 +630,7 @@ function gotFileWriter(writer)
                 alert('file opened successfully');              
             }
         }
-    );
+    );*/
 	
 	
 	
